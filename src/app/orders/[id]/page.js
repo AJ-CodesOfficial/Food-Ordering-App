@@ -44,7 +44,7 @@ export default function OrdersPage() {
   }
 
   return (
-    <section className="lg:max-w-2xl max-w-lg mx-auto mt-8">
+    <section className="lg:max-w-3xl max-w-lg mx-auto mt-8">
       <div className=" text-center">
         <SectionHeaders mainHeader={"Your Order"} />
 
@@ -60,7 +60,7 @@ export default function OrdersPage() {
         </div>
       )}
       {order && (
-        <div className="grid lg:grid-cols-2 gap- mt-4">
+        <div className="grid lg:grid-cols-2 gap-8 mt-4">
           <div className="mb-8">
             {order.cartProducts.map((product) => (
               <CartProduct key={product._id} product={product} />
