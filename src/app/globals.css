@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+section.hero {
+  @apply block md:grid;
+  grid-template-columns: 0.4fr 0.6fr;
+}
+
+select,
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="text"] {
+  @apply block w-full mb-2 rounded-xl;
+  @apply border p-2 border-gray-300 bg-gray-100;
+}
+
+input[type="email"]:disabled,
+input[type="password"]:disabled,
+input[type="tel"]:disabled,
+input[type="number"]:disabled,
+input[type="text"]:disabled {
+  @apply bg-gray-300 cursor-not-allowed border-0 text-gray-500;
+}
+
+button,
+.button {
+  @apply flex justify-center w-full text-gray-700 font-semibold;
+  @apply border border-gray-300 rounded-xl px-6 py-2;
+}
+
+button[type="submit"],
+.submit,
+button.primary {
+  @apply border-primary bg-primary text-white;
+}
+
+button[type="submit"]:disabled,
+.submit:disabled {
+  @apply cursor-not-allowed bg-red-400;
+}
+
+label {
+  @apply text-gray-500 text-sm leading-tight;
+}
+
+label + input {
+  margin-top: -2px;
+}
+
+div.tabs > * {
+  @apply bg-gray-300 text-gray-700 rounded-full px-4 py-2;
+}
+
+div.tabs > *.active {
+  @apply bg-primary text-white;
+}
+
+.flying-button-parent button {
+  @apply border-primary bg-primary text-white rounded-full;
+}
